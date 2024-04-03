@@ -63,6 +63,18 @@ button:hover {
   padding: 25px;
 }
 
+.card.easy {
+  border: 2px solid green;
+}
+
+.card.medium {
+  border: 2px solid yellow;
+}
+
+.card.hard {
+  border: 2px solid red;
+}
+
 .hidden {
   display: none;
 }
