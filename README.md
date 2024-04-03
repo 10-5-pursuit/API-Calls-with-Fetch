@@ -1,26 +1,12 @@
 # API Calls with Fetch
 
-Now that you can access data from JSON APIs, build a trivia application that makes use of the [Open Trivia Database](https://opentdb.com/api_config.php).
+I've built a trivia application that makes use of the [Open Trivia Database](https://opentdb.com/api_config.php).
 
 ![Image of a completed lab.](./assets/preview.png)
 
----
+[Open Trivia Database](https://opentdb.com/api_config.php),  provides data to update the form so that when it is submitted 10 new trivia questions appear on the page.
 
-## Lab Setup
-
-### Getting started
-
-1. Fork and clone this repository.
-
-1. Navigate to the `settings` tab on GitHub, then choose `Pages` from the menu. Configure the `Build and Deployment` to have a `Source` of `Deploy from a branch` and select the `main` branch for deployment. Deployments can take a few minutes, so get started on the lab, and then be sure to check the deployment after you have made a few commits.
-
-1. Open up the repository in VSCode. Follow the instructions below to complete the Lab.
-
-## Instructions
-
-Using the [Open Trivia Database](https://opentdb.com/api_config.php), update the form so that when it is submitted 10 new trivia questions appear on the page.
-
-You may use the following HTML format for each trivia question. Replace the text with the relevant values from the API.
+Using the following HTML format for each trivia question. The application replaces the text with the relevant values from the API.
 
 ```html
 <article class="card">
@@ -30,12 +16,11 @@ You may use the following HTML format for each trivia question. Replace the text
   <p class="hidden">CORRECT ANSWER</p>
 </article>
 ```
+Clicking the Show Answer button reveals the correct answer.
 
-For the tests to pass, each question needs the `.card` class.
+my link to index    - [Trivia Questions](https://jmoncayo-pursuit.github.io/API-Calls-with-Fetch/)
 
-For each trivia question, then make it so that clicking on the button reveals the correct answer.
-
-Once you have completed the base requirements above, complete the following tasks _as time allows._
+Future Updates:
 
 - [ ] The API returns a "difficulty" key which categorizes the question based on how difficult it is. Display this difficult on the page through both text and CSS. For example, you may change the border color of the `.card` element to yellow if it is a medium difficulty question.
 
