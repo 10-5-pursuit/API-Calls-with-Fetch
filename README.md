@@ -22,8 +22,6 @@ my link to index    - [Trivia Questions](https://jmoncayo-pursuit.github.io/API-
 
 Future Updates:
 
-- Decoding characters 
-
 - [ ] The API returns a "difficulty" key which categorizes the question based on how difficult it is. Display this difficult on the page through both text and CSS. For example, you may change the border color of the `.card` element to yellow if it is a medium difficulty question.
 
 - [ ] Add a dropdown to the form so that the user can select what category they'd like for their questions. When the form is submitted, update the API call so that only those types of questions are retrieved.

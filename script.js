@@ -1,14 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('.card button');
-  
-    buttons.forEach(button => {
-      button.addEventListener('click', function() {
-        const answer = this.nextElementSibling;
-        answer.classList.toggle('hidden');
-      });
-    });
-  });
-  document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
     const main = document.querySelector('main');
   
@@ -18,20 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
       const response = await fetch('https://opentdb.com/api.php?amount=10');
       const data = await response.json();
   
-      main.innerHTML = ''; 
+      main.innerHTML = ''; //clears previous questions
   
       data.results.forEach((question, index) => {
         const card = document.createElement('article');
         card.classList.add('card');
         const category = document.createElement('h2');
-        category.textContent = `Category: ${question.category}`;
+        category.textContent = `Category: ${decodeHtml(question.category)}`; // decode HTML 
         const questionText = document.createElement('p');
-        questionText.textContent = question.question;
+        questionText.textContent = decodeHtml(question.question); // decode HTML 
         const button = document.createElement('button');
         button.textContent = 'Show Answer';
         const answer = document.createElement('p');
         answer.classList.add('hidden');
-        answer.textContent = `Correct Answer: ${question.correct_answer}`;
+        answer.textContent = `Correct Answer: ${decodeHtml(question.correct_answer)}`; // decode HTML
   
         button.addEventListener('click', function() {
           answer.classList.toggle('hidden');
@@ -44,4 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
         main.appendChild(card);
       });
     });
+  
+    // decodes HTML entities
+    function decodeHtml(html) {
+      var txt = document.createElement('textarea');
+      txt.innerHTML = html;
+      return txt.value;
+    }
   });
+  
