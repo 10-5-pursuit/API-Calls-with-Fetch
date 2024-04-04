@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;700&display=swap");
-
 html,
 body {
   color: #0f0e0e;
@@ -37,10 +36,26 @@ header h1 span {
 
 .centered {
   display: grid;
-  gap: 15px;
   grid-template-columns: repeat(3, 1fr);
   margin: 25px auto;
   width: 75%;
+}
+.centered select, .centered fieldset {
+  margin-bottom: 15px;
+}
+
+.q-centered {
+  width: 75%;
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  margin-bottom: 15px;
+}
+.question div {
+  margin-bottom: 15px;
 }
 
 button {
@@ -58,11 +73,4 @@ button:hover {
   background: #5c946e;
 }
 
-.card {
-  border: 3px solid #4f7d5d;
-  padding: 25px;
-}
-
-.hidden {
-  display: none;
-}
+/*# sourceMappingURL=index.css.map */
