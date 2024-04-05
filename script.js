@@ -19,7 +19,6 @@ triviaForm.addEventListener("submit", async (event) => {
       const card = document.createElement("article");
       card.classList.add("card");
 
-      // Add difficulty class based on question difficulty
       if (question.difficulty === "easy") {
         card.classList.add("easy");
       } else if (question.difficulty === "medium") {
@@ -30,7 +29,7 @@ triviaForm.addEventListener("submit", async (event) => {
 
       const difficultyElement = document.createElement("div");
       difficultyElement.classList.add("difficulty");
-      difficultyElement.textContent = `Difficulty: ${question.difficulty}`;
+      difficultyElement.textContent = `Difficulty: ${question.difficulty.toUpperCase()}`;
       card.appendChild(difficultyElement);
 
       const categoryElement = document.createElement("h2");
