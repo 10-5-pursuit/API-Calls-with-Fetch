@@ -12,12 +12,21 @@
       <h1>Trivia Questions</h1>
     </header>
     <section class="centered">
-      <form>
+      <form id="triviaForm">
+        <select id="category">
+          <option value="9">General Knowledge</option>
+          <option value="25">Art</option>
+          <option value="10">Entertainment: Books</option>
+          <option value="22">Geography</option>
+          <option value="19">Science: Mathematics</option>
+          <option value="24">Politics</option>
+          <option value="20">Mythology</option>
+          <option value="18">Science: Computers</option>
+        </select>
         <button type="submit">Get New Questions</button>
       </form>
     </section>
-    <main class="centered">
-      <!-- Your `.card` elements should show up here. -->
-    </main>
+    <main class="centered" id="triviaContainer"></main>
+    <script src="script.js"></script>
   </body>
 </html>
