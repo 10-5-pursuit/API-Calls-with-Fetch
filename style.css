@@ -74,6 +74,30 @@ button:hover {
   padding: 25px;
 }
 
+.card h2 {
+  text-align: center;
+}
+
+.options {
+  /* width: 100%; */
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr;
+}
+
+.card-option {
+  min-width: 160px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  background: var(--accent-color);
+  color: #fbf5f3;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+  /* margin-bottom: 10px; */
+  margin-top: 10px;
+}
+
 .easy {
   border-color: var(--accent-easy-color);
 }
