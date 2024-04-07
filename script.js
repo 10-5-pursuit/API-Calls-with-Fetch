@@ -5,11 +5,26 @@ const BASE_URL = "https://opentdb.com/api.php?amount=10";
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  fetch(BASE_URL)
+  const category = event.target.category.value;
+  const difficulty = event.target.difficulty.value;
+  let queryUrl = BASE_URL;
+
+  if (category != "any") {
+    queryUrl += `&category=${category}`;
+  }
+  if (difficulty != "any") {
+    queryUrl += `&difficulty=${difficulty}`;
+  }
+  console.log(queryUrl);
+
+  fetch(queryUrl)
     .then((response) => response.json()) // Convert response into JSON
     .then((responseJSON) => {
       const results = responseJSON.results;
       results.forEach((data) => {
+        console.log("Difficulty", data.difficulty);
+        console.log("Category", data.category);
+        console.log("==");
         addCard(data);
       });
     });
@@ -36,7 +51,8 @@ function addCard(data) {
 
   //   Create card
   const card = document.createElement("article");
-  card.classList.add("card");
+  const difficulty = data.difficulty;
+  card.classList.add("card", difficulty);
 
   card.append(category, question, button, correctAnswer);
 
