@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;700&display=swap");
 
+:root {
+  --primary-color: #5c946e;
+  --accent-color: #4f7d5d;
+  --accent-easy-color: #3dd86b;
+  --accent-medium-color: #b0b464;
+  --accent-hard-color: #9d4f4f;
+  --off-white: #fbf5f3;
+}
+
 html,
 body {
   color: #0f0e0e;
@@ -20,8 +29,8 @@ h6 {
 }
 
 header {
-  background: #5c946e;
-  border-bottom: 3px solid #4f7d5d;
+  background: var(--primary-color);
+  border-bottom: 3px solid var(--accent-color);
   color: #fbf5f3;
 }
 
@@ -44,9 +53,10 @@ header h1 span {
 }
 
 button {
-  border: 2px solid #5c946e;
+  min-width: 160px;
+  border: 2px solid var(--primary-color);
   border-radius: 5px;
-  background: #4f7d5d;
+  background: var(--accent-color);
   color: #fbf5f3;
   cursor: pointer;
   font-weight: bold;
@@ -54,15 +64,90 @@ button {
 }
 
 button:hover {
-  border: 2px solid #4f7d5d;
-  background: #5c946e;
+  border: 2px solid var(--accent-color);
+  background: var(--primary-color);
 }
 
 .card {
-  border: 3px solid #4f7d5d;
+  border: 5px solid var(--accent-color);
+  border-radius: 10px;
   padding: 25px;
+}
+
+.card h2 {
+  text-align: center;
+}
+
+.options {
+  /* width: 100%; */
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr;
+}
+
+.card-option {
+  min-width: 160px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  background: var(--accent-color);
+  color: #fbf5f3;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+  /* margin-bottom: 10px; */
+  margin-top: 10px;
+}
+
+.easy {
+  border-color: var(--accent-easy-color);
+}
+
+.medium {
+  border-color: var(--accent-medium-color);
+}
+
+.hard {
+  border-color: var(--accent-hard-color);
 }
 
 .hidden {
   display: none;
+}
+
+form {
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  gap: 5%;
+  grid-template-columns: auto auto auto;
+  padding-top: 40px;
+}
+
+.form-item {
+  display: grid;
+  place-items: center;
+  place-content: center;
+  gap: 10px;
+  grid-template-columns: auto auto;
+  background-color: var(--primary-color);
+  padding-left: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: var(--off-white);
+}
+
+.form-item select {
+  padding: 12px;
+  font-weight: bold;
+  color: var(--off-white);
+  background-color: var(--accent-color);
+  border: none;
+  /* border: 2px solid var(--primary-color); */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-item select:hover {
+  background-color: var(--primary-color);
+  border-color: var(--accent-color);
 }
