@@ -66,3 +66,8 @@ button:hover {
 .hidden {
   display: none;
 }
+
+.selectWarning {
+  display: none;
+  color: red;
+}
