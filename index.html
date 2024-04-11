@@ -7,6 +7,7 @@
     <title>Trivia Questions</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
+
   </head>
   <body>
     <header>
@@ -15,6 +16,12 @@
     <section class="centered">
       <form>
         <button type="submit">Get New Questions</button>
+        <select name="difficulty" id="difficulty" class="questDifficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <p class="selectWarning">(!) Please select a difficulty on the drop-down menu</p>
       </form>
     </section>
     <main class="centered">
