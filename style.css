@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;700&display=swap");
 
+
 html,
 body {
   color: #0f0e0e;
@@ -45,6 +46,7 @@ header h1 span {
 
 button {
   border: 2px solid #5c946e;
+  width: 150px;
   border-radius: 5px;
   background: #4f7d5d;
   color: #fbf5f3;
@@ -65,4 +67,36 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+form {
+  display: grid;
+  margin-left: 50px;
+  place-items: center;
+  justify-content: center;
+  gap: 5%;
+  grid-template-columns: auto auto auto;
+  padding-top: 40px;
+}
+
+.form-item {
+  display: grid;
+  place-items: center;
+  place-content: center;
+  gap: 15px;
+  grid-template-columns: auto auto;
+  padding-left: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.form-item select {
+  margin-left: 0px;
+  width: 150px;
+  padding: 12px;
+  font-weight: bold;
+  color: var(--off-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
