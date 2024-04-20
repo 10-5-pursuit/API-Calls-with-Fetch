@@ -1,11 +1,13 @@
 const form = document.querySelector("form");
 const main = document.querySelector("main");
 
-const BASE_URL = "https://opentdb.com/api.php?amount=10";
+const BASE_URL = "https://opentdb.com/api.php?";
 const results = {
   correct: 0,
   incorrect: 0,
 };
+let amount = 5;
+
 
 // Mock Data
 data = form.addEventListener("submit", (event) => {
@@ -14,6 +16,8 @@ data = form.addEventListener("submit", (event) => {
   const category = event.target.category.value;
   const difficulty = event.target.difficulty.value;
   let queryUrl = BASE_URL;
+  queryUrl +=`amount=${amount}`
+
   if (category != "any") {
     queryUrl += `&category=${category}`;
   }
@@ -78,7 +82,7 @@ function addCard(data) {
         element.disabled = true;
       });
 
-      if (results.incorrect + results.correct == 10) {
+      if (results.incorrect + results.correct == amount) {
         alert(
           `Total:\nCorrect: ${results.correct}\nIncorrect: ${results.incorrect}`
         );

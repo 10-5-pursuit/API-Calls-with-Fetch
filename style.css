@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;700&display=swap");
-:root {
-  --primary-color: #5c946e;
-  --accent-color: #4f7d5d;
-  --accent-easy-color: #3dd86b;
-  --accent-medium-color: #b0b464;
-  --accent-hard-color: #9d4f4f;
-  --off-white: #fbf5f3;
-}
+
 
 html,
 body {
@@ -53,6 +46,7 @@ header h1 span {
 
 button {
   border: 2px solid #5c946e;
+  width: 150px;
   border-radius: 5px;
   background: #4f7d5d;
   color: #fbf5f3;
@@ -77,6 +71,7 @@ button:hover {
 
 form {
   display: grid;
+  margin-left: 50px;
   place-items: center;
   justify-content: center;
   gap: 5%;
@@ -88,27 +83,20 @@ form {
   display: grid;
   place-items: center;
   place-content: center;
-  gap: 10px;
+  gap: 15px;
   grid-template-columns: auto auto;
-  background-color: var(--primary-color);
   padding-left: 10px;
   border-radius: 5px;
   font-weight: bold;
-  color: var(--off-white);
 }
 
 .form-item select {
+  margin-left: 0px;
+  width: 150px;
   padding: 12px;
   font-weight: bold;
   color: var(--off-white);
-  background-color: var(--accent-color);
   border: none;
-  /* border: 2px solid var(--primary-color); */
   border-radius: 5px;
   cursor: pointer;
-}
-
-.form-item select:hover {
-  background-color: var(--primary-color);
-  border-color: var(--accent-color);
 }
