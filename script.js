@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Prevent the default form submission behavior
         event.preventDefault();
 
-        // Fetch trivia questions from the API
+        // !!!!!Fetch trivia questions from the API!!!!!!
         fetch("https://opentdb.com/api.php?amount=10&category=20&type=multiple")
             // Parse the response as JSON
             .then(response => response.json())
